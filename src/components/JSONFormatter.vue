@@ -1,7 +1,7 @@
 <template>
     <div>
       <el-container class="inputJSON" style="display: flex;">
-        <input v-model="jsonFormatter.raw" style="flex: 1;"></input>
+        <input v-model="jsonFormatter.raw" style="flex: 1;">
         <el-button @click="parseJSON" style="margin-left: 1.5rem;">Process</el-button>
       </el-container>
       <el-container>
