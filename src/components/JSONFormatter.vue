@@ -1,11 +1,12 @@
 <template>
     <div>
-      <el-container class="inputJSON" style="display: flex;">
-        <input v-model="jsonFormatter.raw" style="flex: 1;">
-        <el-button @click="parseJSON" style="margin-left: 1.5rem;">Process</el-button>
+      <el-container class="inputJSON" style="flex-direction: column;">
+        <textarea rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
+        <el-button @click="parseJSON" style="margin-top: 1.5rem;">Process</el-button>
       </el-container>
       <el-container>
-        <div class="formatter-result">
+        <div class="formatter-result" style="margin-top: 12px;">
+          <div v-if="error" class="error">{{ error }}</div>
           <pre v-html="jsonFormatter.formatted"></pre>
         </div>
       </el-container>
@@ -21,6 +22,7 @@ export default {
         raw: '',
         formatted: ''
       },
+      error: null
     }
   },
   methods: {
@@ -28,8 +30,10 @@ export default {
       try {
         var raw = JSON.parse(this.jsonFormatter.raw)
         this.jsonFormatter.formatted = JSON.stringify(raw, null, "  ")
-      } catch (e) {
-        alert(e.name+': '+e.message)
+        this.error = null
+      } catch (err) {
+        this.error = err.toString()
+        this.jsonFormatter.formatted = null
       }
     }
   }
