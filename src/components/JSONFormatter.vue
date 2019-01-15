@@ -4,11 +4,9 @@
         <textarea rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
         <el-button @click="parseJSON" style="margin-top: 1.5rem;">Process</el-button>
       </el-container>
-      <el-container>
-        <div class="formatter-result" style="margin-top: 12px;">
-          <div v-if="error" class="error">{{ error }}</div>
-          <pre v-html="jsonFormatter.formatted"></pre>
-        </div>
+      <el-container style="margin-top: 12px;">
+        <div v-if="error" class="error">{{ error }}</div>
+        <pre width="100%" v-html="jsonFormatter.formatted"></pre>
       </el-container>
     </div>
 </template>
