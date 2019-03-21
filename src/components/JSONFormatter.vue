@@ -1,14 +1,17 @@
 <template>
-    <div>
-      <el-container class="inputJSON" style="flex-direction: column;">
-        <textarea rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
-        <el-button @click="parseJSON" style="margin-top: 1.5rem;">Process</el-button>
-      </el-container>
-      <el-container style="margin-top: 12px;">
-        <div v-if="error" class="error">{{ error }}</div>
-        <pre width="100%" v-html="jsonFormatter.formatted"></pre>
-      </el-container>
+  <div class="row d-flex flex-column">
+    <div class="d-flex align-items-center">
+      <button class="btn close" @click.prevent="$emit('close')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon">
+          <path d=" M10 10 m0 2 l5 5 2 -2 -5 -5 5 -5 -2 -2 -5 5 -5 -5 -2 2 5 5 -5 5 2 2 5 -5z "/>
+         </svg>
+      </button>
+      <button class="btn ml-auto" @click="parseJSON">Parse</button>
     </div>
+    <textarea class="inputJSON" spellcheck="false" rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
+    <div v-if="error" class="error">{{ error }}</div>
+    <pre class="fade" v-html="jsonFormatter.formatted"></pre>
+  </div>
 </template>
 
 <script>
