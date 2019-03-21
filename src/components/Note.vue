@@ -1,12 +1,16 @@
 <template>
-  <div v-html="text" style="padding: 1.5rem;"></div>
+  <div style="padding: 1.5rem;">
+    <h3 style="text-align: center;">{{ name }}</h3>
+    <div v-html="text"></div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Note',
   props: {
-    text: String
+    text: String,
+    name: String
   }
 }
 </script>
