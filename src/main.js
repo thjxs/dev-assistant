@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import './sass/app.scss'
 
 Vue.config.productionTip = false
 
@@ -23,5 +25,6 @@ requireComponent.keys().forEach(fileName => {
 
 
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app')

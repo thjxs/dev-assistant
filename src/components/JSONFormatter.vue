@@ -8,7 +8,7 @@
       </button>
       <button class="btn ml-auto" @click="parseJSON">Parse</button>
     </div>
-    <textarea class="inputJSON" spellcheck="false" rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
+    <textarea class="inputJSON scrollbar-dark" spellcheck="false" rows="18" cols="50" v-model="jsonFormatter.raw"></textarea>
     <div v-if="error" class="error">{{ error }}</div>
     <pre class="fade" v-html="jsonFormatter.formatted"></pre>
   </div>

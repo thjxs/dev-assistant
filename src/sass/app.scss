@@ -1,0 +1,183 @@
+@import 'common.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #777;
+}
+
+pre,
+pre[class*="language-"] {
+  font-size: 12px;
+  line-height: 2;
+}
+
+pre,
+pre[class*="language-"] {
+  background-color: rgba(238,238,238,.35);
+  border-radius: 3px;
+  padding: .5rem;
+  box-shadow: 0 1px 1px rgba(0,0,0,.125)
+}
+
+// Scrollbar
+.scrollbar-dark {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(156,147,147,.6);
+  }
+}
+body::-webkit-scrollbar,
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+}
+
+.fade {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.close {
+  padding: 5px;
+
+  svg {
+    display: block;
+    fill: #555;
+  }
+
+  &:hover {
+    background-color: #e74c3c;
+    svg {
+      fill: #eee;
+    }
+  }
+}
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  position: fixed;
+  width: inherit;
+}
+
+.main {
+  padding-top: 60px;
+}
+
+.animate-slide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 7;
+  transition: width .3s ease;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  box-shadow: 0 5px 5px #1a2b3c;
+  overflow: auto;
+
+  &.active {
+    width: 540px;
+  }
+}
+
+.header {
+  height: 60px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.main-content {
+  max-width: 660px;
+  width: 100%;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 240px;
+  height: 81%;
+  overflow: auto;
+
+  svg {
+    display: inline-block;
+    margin-right: 15px;
+    fill: #c3cbd3;
+  }
+
+  .title {
+    color: #777;
+  }
+
+  .nav-item a {
+    padding: .5rem 0;
+
+    &.active {
+      color: #404033;
+      svg {
+        fill: #404033;
+      }
+    }
+  }
+}
+
+.file-tree {
+  div[level="2"],
+  a[level="2"] {
+    padding-left: 1rem;
+  }
+
+  div[level="3"],
+  a[level="3"] {
+    padding-left: 2rem;
+  }
+
+  div[level="4"],
+  a[level="4"] {
+    padding-left: 3rem;
+  }
+
+  .tree-name {
+    padding: .5rem 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
