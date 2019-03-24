@@ -7,7 +7,7 @@ const state = {
 
 const actions = {
   fetchNote ({ commit }, {path, name}) {
-    axios.get('http://note.test/?target=' + path).then(response => {
+    axios.get('http://note.test/' + path).then(response => {
       commit('setNote', response.data)
       commit('setNoteName', name)
     })

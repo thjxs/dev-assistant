@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 1.5rem;">
+  <div style="font-family: monospace; padding: 1.5rem;">
     <h1 style="margin-bottom: 1rem;text-transform: uppercase;text-align: center;">{{ name }}</h1>
     <div v-html="text"></div>
   </div>
@@ -7,6 +7,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Prism from 'prismjs'
 export default {
   name: 'Note',
   computed: {
@@ -14,6 +15,18 @@ export default {
       name: state => state.note.currentNoteName,
       text: state => state.note.text
     })
+  },
+  created() {
+    this.$nextTick(function() {
+      Prism.highlightAll()
+    })
+  },
+  watch: {
+    text: function () {
+      this.$nextTick(function() {
+        Prism.highlightAll()
+      })
+    }
   }
 }
 </script>
