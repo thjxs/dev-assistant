@@ -8,21 +8,21 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.19",
+    "axios": "^0.21",
     "babel-plugin-prismjs": "^2.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^5.0",
     "prismjs": "^1.21.0",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^10.0.0",
     "vue": "^2.6.10",
-    "vuex": "^3.1.2"
+    "vuex": "^3.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.4.1",
-    "@vue/cli-plugin-eslint": "^4.4.1",
-    "@vue/cli-service": "^4.4.1",
+    "@vue/cli-plugin-babel": "^4.5",
+    "@vue/cli-plugin-eslint": "^4.5",
+    "@vue/cli-service": "^4.5",
     "babel-eslint": "^10.0.1",
-    "eslint": "^7.2",
-    "eslint-plugin-vue": "^6.2",
+    "eslint": "^7.14",
+    "eslint-plugin-vue": "^7.1",
     "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },
