@@ -11,7 +11,7 @@
     "axios": "^0.21",
     "babel-plugin-prismjs": "^2.0",
     "node-sass": "^5.0",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "sass-loader": "^10.0.0",
     "vue": "^2.6.10",
     "vuex": "^3.5"
