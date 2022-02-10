@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21",
     "babel-plugin-prismjs": "^2.0",
-    "node-sass": "^5.0",
+    "node-sass": "^7.0",
     "prismjs": "^1.23.0",
     "sass-loader": "^10.0.0",
     "vue": "^2.6.10",
